@@ -23,6 +23,17 @@ async function updateRegisteredScripts() {
                     "*://www.bitget.com/asia/futures/usdt/*"
                 ],
                 runAt: "document_idle"
+            },
+            {
+                id: "position-usdt-script",
+                js: ["position.js"],
+                matches: [
+                    "*://bitget.com/futures/usdt/*",
+                    "*://bitget.com/asia/futures/usdt/*",
+                    "*://www.bitget.com/futures/usdt/*",
+                    "*://www.bitget.com/asia/futures/usdt/*"
+                ],
+                runAt: "document_idle"
             }
         ]);
     }
@@ -32,6 +43,17 @@ async function updateRegisteredScripts() {
             {
                 id: "content-usdc-script",
                 js: ["content-usdc.js"],
+                matches: [
+                    "*://bitget.com/futures/usdc/*",
+                    "*://bitget.com/asia/futures/usdc/*",
+                    "*://www.bitget.com/futures/usdc/*",
+                    "*://www.bitget.com/asia/futures/usdc/*"
+                ],
+                runAt: "document_idle"
+            },
+            {
+                id: "position-usdc-script",
+                js: ["position.js"],
                 matches: [
                     "*://bitget.com/futures/usdc/*",
                     "*://bitget.com/asia/futures/usdc/*",
