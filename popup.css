@@ -1,0 +1,225 @@
+/* 공통 스타일 */
+body {
+    /* 시스템 폰트를 우선으로 사용 */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+      "Open Sans", "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 280px;              /* 팝업 전체 너비. 필요에 따라 조절 */
+    background-color: #f7f8fa; /* 조금 더 밝고 깔끔한 느낌을 주는 배경색 */
+    color: #333;               /* 텍스트 가독성을 위한 어두운 색상 */
+    box-sizing: border-box;    /* 테두리 및 패딩 계산을 좀 더 직관적으로 */
+  }
+  
+  /* 탭 영역 */
+  .tab-nav {
+    display: flex;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* 탭 버튼 */
+  .tab-btn {
+    flex: 1;
+    padding: 12px 0;
+    cursor: pointer;
+    text-align: center;
+    background: #fff;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.2s, color 0.2s;
+    border-right: 1px solid #eee;
+  }
+  
+  .tab-btn:last-child {
+    border-right: none;
+  }
+  
+  .tab-btn:hover {
+    background: #f2f3f5;
+  }
+  
+  .tab-btn.active {
+    background: #fff;
+    color: #2196f3;
+    border-bottom: 2px solid #2196f3;
+  }
+  
+  /* 탭 컨텐츠 영역 */
+  .tab-content {
+    padding: 16px;
+  }
+  
+  .tab-page {
+    display: none;
+  }
+  
+  .tab-page.active {
+    display: block;
+  }
+  
+  /* 섹션 제목 */
+  .section-title {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* 공통 라벨 스타일 */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  /* 숫자 입력 */
+  input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    padding: 8px;
+    border-radius: 4px;    /* 모서리를 살짝 둥글게 */
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  /* 버튼 영역 */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  /* 버튼 공통 스타일 */
+  .btn {
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    margin: 2px;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.2s, opacity 0.2s;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  .btn:active {
+    opacity: 0.8;
+  }
+  
+  /* 버튼 별도 색상 */
+  .btn-fetch {
+    background-color: #2196f3;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  
+  .btn-cancel {
+    background-color: #e53e3e; /* 좀 더 산뜻한 빨간색 계열 */
+    color: #fff;
+    flex: 1;
+  }
+  
+  .btn-save {
+    background-color: #4caf50;
+    color: #fff;
+    flex: 1;
+  }
+  
+  /* 정보(Info) 탭 내부 스타일 */
+  .info-text {
+    font-size: 14px;
+    line-height: 1.6em;
+    color: #555;
+  }
+  
+  .info-text a {
+    color: #2196f3;
+    text-decoration: none;
+  }
+  
+  .info-text a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 토글 스위치 디자인 */
+  .toggle-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  /* 스위치 컨테이너 */
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+    margin-right: 8px; 
+  }
+  
+  /* 토글 스위치 (숨김) */
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* 슬라이더 영역 */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  /* 슬라이더 동그라미 */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #fff;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  /* 체크된 상태 */
+  input:checked + .slider {
+    background-color: #4caf50; /* ON 색상 */
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(22px);
+  }
+  
+  /* 둥근 모서리 스타일 (원형 슬라이더) */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  /* 토글 라벨 */
+  .toggle-label {
+    font-size: 14px;
+    font-weight: normal;
+    cursor: pointer;
+  }
+  
