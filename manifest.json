@@ -1,6 +1,6 @@
 {
   "name": "u2k for bitget",
-  "description": "bitget 거래소에서 USD(T)를 KRW로 변환한 정보를 추가로 보여주는 크롬 확장 프로그램",
+  "description": "bitget 거래소에서 USDT를 KRW로 변환한 정보를 추가로 보여주는 크롬 확장 프로그램",
   "version": "1.0.0",
   "manifest_version": 3,
   "icons": {
