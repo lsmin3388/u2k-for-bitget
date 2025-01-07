@@ -1,6 +1,4 @@
 (async function () {
-    "use strict";
-
     let currentExchangeRate = 1300;
 
     async function loadExchangeRate() {
@@ -19,7 +17,6 @@
     chrome.storage.onChanged.addListener((changes, area) => {
         if (area === "sync" && changes.u2k_exchangeRate) {
             currentExchangeRate = changes.u2k_exchangeRate.newValue || 1300;
-            // console.log("[position.js] 환율 업데이트:", currentExchangeRate);
         }
     });
 
@@ -148,6 +145,4 @@
 
     const observer = new MutationObserver(callback);
     observer.observe(document.body, observerConfig);
-
-    // console.log("[position.js] Global MutationObserver for USD -> KRW started.");
 })();

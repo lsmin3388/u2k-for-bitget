@@ -17,10 +17,10 @@
     </div>
 
     <!-- 탭 페이지 1 : 환율 설정 -->
-    <div id="tab-rate" class="tab-page active tab-content">
+    <div id="tab-rate" class="tab-page active tab-content" role="tabpanel" aria-labelledby="환율 설정">
         <h3 class="section-title">환율 설정</h3>
         <label for="exchangeRate">현재 원/달러 환율</label>
-        <input type="number" id="exchangeRate" step="0.01" />
+        <input type="number" id="exchangeRate" step="0.01" aria-describedby="exchangeRateHelp" />
 
         <!-- 실시간 환율 가져오기 버튼 -->
         <button id="btnFetch" class="btn btn-fetch">실시간 환율 가져오기</button>
@@ -33,7 +33,7 @@
     </div>
 
     <!-- 탭 페이지 2 : 기능 설정 -->
-    <div id="tab-other" class="tab-page tab-content">
+    <div id="tab-other" class="tab-page tab-content" role="tabpanel" aria-labelledby="기타 설정">
         <h3 class="section-title">기능 설정</h3>
         <div class="toggle-row">
             <label class="toggle-switch">
@@ -61,16 +61,15 @@
     </div>
 
     <!-- 탭 페이지 3 : 정보(info) -->
-    <div id="tab-info" class="tab-page tab-content">
+    <div id="tab-info" class="tab-page tab-content" role="tabpanel" aria-labelledby="정보">
         <h3 class="section-title">정보 (Info)</h3>
 
         <!-- 전체 info를 감싸는 컨테이너 -->
         <div class="info-container">
-
             <!-- 버전 정보 섹션 -->
             <div class="info-section">
                 <h4>버전 정보</h4>
-                <p>Extension Version: <span id="extensionVersion"></span></p>
+                <p>Extension Version: <span id="extensionVersion">1.0.1</span></p>
             </div>
 
             <!-- 라이선스 정보 섹션 -->
@@ -84,8 +83,7 @@
                 <h4>프로그램 정보</h4>
                 <p>
                     GitHub Repo:
-                    <a href="https://github.com/lsmin3388/u2k-for-bitget"
-                        target="_blank">바로가기</a>
+                    <a href="https://github.com/lsmin3388/u2k-for-bitget" target="_blank" rel="noopener noreferrer">바로가기</a>
                 </p>
             </div>
 
@@ -99,7 +97,6 @@
                     모든 투자 및 거래에 대한 책임은 전적으로 사용자 본인에게 있습니다.
                 </p>
             </div>
-
         </div>
     </div>
 

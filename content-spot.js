@@ -1,13 +1,9 @@
-(function () {
-    // console.log("[content-spot.js] loaded.");
-
+(() => {
     const pathParts = location.pathname.split("/");
     const spotIndex = pathParts.indexOf("spot");
     if (spotIndex === -1) return;
     const pair = pathParts[spotIndex + 1] || "";
     if (!pair.toUpperCase().includes("USDT")) return;
-
-    // console.log(`[content-spot.js] Spot USDT pair detected: ${pair}`);
 
     let currentExchangeRate = 1300;
     let observer = null;
@@ -25,7 +21,6 @@
     function initObserver() {
         container = document.querySelector(".RHLdJhiFsdXWCXga_SRH");
         if (!container) {
-            // console.log("[content-spot.js] .RHLdJhiFsdXWCXga_SRH not found");
             return;
         }
 
